@@ -13,7 +13,7 @@ class CouponsController <ApplicationController
   end
 
   def create
-    byebug
+   
     @coupon = Coupon.create(coupon_code: params["coupon"]['coupon_code'], store: params['coupon']["store"])
     
     @coupon.save
