@@ -14,7 +14,7 @@ class CouponsController <ApplicationController
 
   def create
     byebug
-    @coupon = Coupon.create(coupon_code: params["coupon"], store: params["store"])
+    @coupon = Coupon.create(coupon_code: params["coupon"]['coupon_code'], store: params['coupon']["store"])
     
     @coupon.save
     redirect_to coupon_path(@coupon)
